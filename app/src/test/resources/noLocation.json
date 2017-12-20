@@ -1,0 +1,42 @@
+{
+  "html_attributions":[
+
+  ],
+  "results":[
+    {
+      "formatted_address":"Dallas, TX, USA",
+      "geometry":{
+        "viewport":{
+          "northeast":{
+            "lat":33.0237921,
+            "lng":-96.4637379
+          },
+          "southwest":{
+            "lat":32.617537,
+            "lng":-96.999347
+          }
+        }
+      },
+      "icon":"https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+      "id":"fa589a36153613fc17b0ebaebbea7c1e31ca62f0",
+      "name":"Dallas",
+      "photos":[
+        {
+          "height":800,
+          "html_attributions":[
+            "\u003ca href=\"https://maps.google.com/maps/contrib/110624056659739305201/photos\"\u003eStefano Simonetti\u003c/a\u003e"
+          ],
+          "photo_reference":"CmRaAAAAGpoAePbn0XRb9m81L7BQjSx8XTHRyuBO0bAkWYFtL6qMqrmnlYeSmEPUxUng4s5OGQpG6PIz0uEVPlPf3GPdl2TeMCtANDu9tVnynYJFhlw4LVzx1rsQCSN3drz94UgyEhDEwiFCMK12lKpaQtlRKmzYGhT1uiA9Y050CTfCf4Tku6QfKwV0WA",
+          "width":1200
+        }
+      ],
+      "place_id":"ChIJS5dFe_cZTIYRj2dH9qSb7Lk",
+      "reference":"CmRbAAAAfSWO-ZMCGHZ7NG28i1De2WNCwBiCb9JUkx1nyj5Wdix5FNMNyIXataN49VUYBO9XI8TANsvifCLQ3j7YG6BWRrqxasBxvKzYvM_JmWGTLJ0woNWn3Zec05xCoMHrAWmsEhDPIctlR_gVnwY3eRD0I_vqGhQt4jES574oiqi_QjDaZp-6B_MU8A",
+      "types":[
+        "locality",
+        "political"
+      ]
+    }
+  ],
+  "status":"OK"
+}
