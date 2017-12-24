@@ -1,4 +1,4 @@
-package com.myhexaville.androidtests;
+package com.myhexaville.androidtests.data;
 
 public class Location {
     private String cityName;

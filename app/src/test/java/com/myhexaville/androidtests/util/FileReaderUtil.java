@@ -1,4 +1,4 @@
-package com.myhexaville.androidtests;
+package com.myhexaville.androidtests.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;

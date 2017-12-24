@@ -1,8 +1,8 @@
-package com.myhexaville.androidtests;
+package com.myhexaville.androidtests.util;
 
 import org.junit.Test;
 
-import static com.myhexaville.androidtests.FirstNameExtractor.extractFirstName;
+import static com.myhexaville.androidtests.util.FirstNameExtractor.extractFirstName;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.*;

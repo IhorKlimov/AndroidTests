@@ -1,10 +1,10 @@
-package com.myhexaville.androidtests;
+package com.myhexaville.androidtests.util;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSyntaxException;
+import com.myhexaville.androidtests.data.Location;
 
 public class JsonParser {
 

@@ -1,10 +1,11 @@
-package com.myhexaville.androidtests;
+package com.myhexaville.androidtests.util;
+
+import com.myhexaville.androidtests.data.Location;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.myhexaville.androidtests.FileReaderUtil.readFile;
-import static com.myhexaville.androidtests.JsonParser.parseLocationFromJson;
+import static com.myhexaville.androidtests.util.JsonParser.parseLocationFromJson;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -23,15 +24,15 @@ public class ParseLocationFromJsonTest {
     @Before
     public void readJsonFilesToStrings() {
         ClassLoader classLoader = this.getClass().getClassLoader();
-        correctInput = readFile(classLoader, "correctInput.json");
-        emptyResults = readFile(classLoader, "emptyResults.json");
-        noCity = readFile(classLoader, "noCity.json");
-        noCityAndLocation = readFile(classLoader, "noCityAndLocation.json");
-        noGeometry = readFile(classLoader, "noGeometry.json");
-        noLatitude = readFile(classLoader, "noLatitude.json");
-        noLongitude = readFile(classLoader, "noLongitude.json");
-        noLocation = readFile(classLoader, "noLocation.json");
-        noResults = readFile(classLoader, "noResults.json");
+        correctInput = FileReaderUtil.readFile(classLoader, "correctInput.json");
+        emptyResults = FileReaderUtil.readFile(classLoader, "emptyResults.json");
+        noCity = FileReaderUtil.readFile(classLoader, "noCity.json");
+        noCityAndLocation = FileReaderUtil.readFile(classLoader, "noCityAndLocation.json");
+        noGeometry = FileReaderUtil.readFile(classLoader, "noGeometry.json");
+        noLatitude = FileReaderUtil.readFile(classLoader, "noLatitude.json");
+        noLongitude = FileReaderUtil.readFile(classLoader, "noLongitude.json");
+        noLocation = FileReaderUtil.readFile(classLoader, "noLocation.json");
+        noResults = FileReaderUtil.readFile(classLoader, "noResults.json");
     }
 
     @Test
