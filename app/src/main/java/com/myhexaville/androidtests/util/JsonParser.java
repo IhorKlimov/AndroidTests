@@ -43,7 +43,7 @@ public class JsonParser {
                 return new Location(cityName, lat, lng);
             }
         } catch (JsonSyntaxException e) {
-            e.printStackTrace();
+            // noop
         }
 
         return new Location();

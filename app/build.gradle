@@ -1,10 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.myhexaville.androidtests"
         minSdkVersion 15
+        vectorDrawables.useSupportLibrary true
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -14,6 +22,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
         }
     }
 }
@@ -26,7 +39,9 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
     testImplementation "org.mockito:mockito-all:1.10.19"
+    testImplementation "org.robolectric:robolectric:3.6.1"
 
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
 }

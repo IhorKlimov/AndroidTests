@@ -2,7 +2,7 @@ package com.myhexaville.androidtests.chat;
 
 public interface ChatContract {
     interface View {
-        void addMessage(String message);
+        void notifyItemAdded(int position);
 
         void clearMessageInput();
 
@@ -16,5 +16,4 @@ public interface ChatContract {
 
         void messageInputTextChanged(String messageInput);
     }
-
 }
