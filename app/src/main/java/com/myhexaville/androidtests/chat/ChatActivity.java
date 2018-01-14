@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import com.myhexaville.androidtests.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChatActivity extends AppCompatActivity implements ChatContract.View {
@@ -27,12 +28,22 @@ public class ChatActivity extends AppCompatActivity implements ChatContract.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // todo instantiate these fields with Dagger or figure out if it's needed at all
+        listOfMessages = new ArrayList<>();
+        adapter = new MessagesAdapter(listOfMessages);
+        presenter = new ChatPresenter(this, listOfMessages);
+
         messageInput = findViewById(R.id.message_input);
         sendButton = findViewById(R.id.send_button);
         recyclerView = findViewById(R.id.list);
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        setupListeners();
+    }
+
+    private void setupListeners() {
         messageInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

@@ -3,15 +3,16 @@ package com.myhexaville.androidtests.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class User  implements Parcelable{
-    private String firstName, lastName, country;
+public class User implements Parcelable {
+    private String firstName, lastName, country, city;
     private long birthDate;
 
-    public User(String firstName, String lastName, long birthDate, String country) {
+    public User(String firstName, String lastName, long birthDate, String country, String city) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
         this.country = country;
+        this.city = city;
     }
 
     protected User(Parcel in) {
@@ -19,6 +20,7 @@ public class User  implements Parcelable{
         lastName = in.readString();
         birthDate = in.readLong();
         country = in.readString();
+        city = in.readString();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -65,6 +67,14 @@ public class User  implements Parcelable{
         this.country = country;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -72,10 +82,10 @@ public class User  implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-//        dest.wri
         dest.writeString(firstName);
         dest.writeString(lastName);
         dest.writeLong(birthDate);
         dest.writeString(country);
+        dest.writeString(city);
     }
 }

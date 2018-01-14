@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myhexaville.androidtests">
+
+    <!--This permission is required to enable/disable system animations from the app itself-->
+    <uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/>
+</manifest>

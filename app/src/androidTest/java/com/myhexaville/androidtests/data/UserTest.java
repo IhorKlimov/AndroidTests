@@ -20,14 +20,16 @@ import static org.junit.Assert.fail;
 @RunWith(AndroidJUnit4.class)
 public class UserTest {
 
-       private static final long SAMPLE_BIRTH_DATE = 663186154;
+    private static final long SAMPLE_BIRTH_DATE = 663186154;
     private static final String JOSH = "Josh";
     private static final String PITZ = "Pitz";
     private static final String BRAZIL = "Brazil";
+    private static final String SAO_PAULO = "Sao Paulo";
+
 
     @Test
     public void testCorrectUserParcelableImplementation() {
-        User user = new User(JOSH, PITZ, SAMPLE_BIRTH_DATE, BRAZIL);
+        User user = new User(JOSH, PITZ, SAMPLE_BIRTH_DATE, BRAZIL, SAO_PAULO);
 
         Parcel parcel = Parcel.obtain();
         user.writeToParcel(parcel, user.describeContents());
@@ -41,6 +43,7 @@ public class UserTest {
         assertThat(createdFromParcel.getLastName(), is(PITZ));
         assertThat(createdFromParcel.getBirthDate(), is(SAMPLE_BIRTH_DATE));
         assertThat(createdFromParcel.getCountry(), is(BRAZIL));
+        assertThat(createdFromParcel.getCity(), is(SAO_PAULO));
     }
 
     private void assertNoFieldsAreNull(Object user) {
