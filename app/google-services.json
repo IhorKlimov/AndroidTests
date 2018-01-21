@@ -1,0 +1,42 @@
+{
+  project_info: {
+    project_number: "8397697787",
+    firebase_url: "https://rxjavademo-acb06.firebaseio.com",
+    project_id: "rxjavademo-acb06",
+    storage_bucket: "rxjavademo-acb06.appspot.com"
+  },
+  client: [
+    {
+      client_info: {
+        mobilesdk_app_id: "1:8397697787:android:2c74cca4b4542183",
+        android_client_info: {
+          package_name: "com.myhexaville.androidtests"
+        }
+      },
+      oauth_client: [
+        {
+          client_id: "8397697787-s0u729b712sul3uebm0b137mv31o5vms.apps.googleusercontent.com",
+          client_type: 3
+        }
+      ],
+      api_key: [
+        {
+          current_key: "AIzaSyB4C-Ub5aePK5PChRtp_gMq7TO5ENU3Ul4"
+        }
+      ],
+      services: {
+        analytics_service: {
+          status: 1
+        },
+        appinvite_service: {
+          status: 1,
+          other_platform_oauth_client: [ ]
+        },
+        ads_service: {
+          status: 2
+        }
+      }
+    }
+  ],
+  configuration_version: "1"
+}

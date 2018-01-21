@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.myhexaville.androidtests.MainActivity">
+    tools:context="com.myhexaville.androidtests.firebase.FirebaseSignUpActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,25 +20,17 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:onClick="openChatActivity"
-            android:layout_height="wrap_content"
-            android:text="Chat activity" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:onClick="openFirebaseActivity"
-            android:layout_marginTop="16dp"
-            android:layout_height="wrap_content"
-            android:text="Firebase activity" />
-    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/sign_up_button"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="signUp"
+        android:text="Sign up with email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.design.widget.CoordinatorLayout>

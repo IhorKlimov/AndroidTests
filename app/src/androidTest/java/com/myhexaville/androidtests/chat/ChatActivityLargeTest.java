@@ -1,10 +1,12 @@
 package com.myhexaville.androidtests.chat;
 
+import android.support.test.espresso.IdlingRegistry;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.myhexaville.androidtests.R;
+import com.myhexaville.androidtests.util.EspressoIdlingResource;
 
 import org.junit.Before;
 import org.junit.ClassRule;
@@ -25,7 +27,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static com.linkedin.android.testbutler.TestButler.verifyAnimationsDisabled;
-import static com.myhexaville.androidtests.util.AnimationAssertions.verifyAnimationsDisabled;
 import static com.myhexaville.androidtests.util.Matchers.withItemText;
 
 @RunWith(AndroidJUnit4.class)
@@ -42,7 +43,7 @@ public class ChatActivityLargeTest {
             new ActivityTestRule<>(ChatActivity.class);
 
     @Before
-    public void checkAnimations(){
+    public void setUp() {
         // unnecessary, just to double check the correct implementation of DeviceAnimationTestRule library
         verifyAnimationsDisabled(activityRule.getActivity());
     }
@@ -54,6 +55,4 @@ public class ChatActivityLargeTest {
         onView(withId(R.id.list)).perform(scrollTo(hasDescendant(withText(MESSAGE))));
         onView(withItemText(MESSAGE)).check(matches(isDisplayed()));
     }
-
-
 }

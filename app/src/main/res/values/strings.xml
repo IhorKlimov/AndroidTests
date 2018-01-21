@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">AndroidTests</string>
     <string name="type_a_message">Type a message</string>
+    <string name="title_activity_firebase_sign_up">FirebaseSignUpActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
