@@ -10,6 +10,8 @@ import android.view.View;
 
 import com.myhexaville.androidtests.chat.ChatActivity;
 import com.myhexaville.androidtests.firebase.FirebaseSignUpActivity;
+import com.myhexaville.androidtests.image_picker.ImagePickerActivity;
+import com.myhexaville.androidtests.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,5 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void openFirebaseActivity(View view) {
         startActivity(new Intent(this, FirebaseSignUpActivity.class));
+    }
+
+    public void openImagePickerActivity(View view) {
+        startActivity(new Intent(this, ImagePickerActivity.class));
+    }
+
+    public void openLoginActivity(View view) {
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }

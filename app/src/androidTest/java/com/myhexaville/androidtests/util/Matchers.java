@@ -2,6 +2,7 @@ package com.myhexaville.androidtests.util;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
@@ -30,6 +31,44 @@ public class Matchers {
                 description.appendText("is isDescendantOfA RV with text " + itemText);
             }
         };
+    }
+
+    public static Matcher<View> hasDrawable() {
+        return new TypeSafeMatcher<View>() {
+
+            @Override
+            public void describeTo(Description description) {
+
+            }
+
+            @Override
+            protected boolean matchesSafely(View item) {
+                ImageView imageView = (ImageView) item;
+                return imageView.getDrawable() != null;
+            }
+        };
+    }
+
+    public static Matcher<View> withTag(String tag) {
+        return new TypeSafeMatcher<View>() {
+
+            @Override
+            public void describeTo(Description description) {
+
+            }
+
+            @Override
+            protected boolean matchesSafely(View item) {
+                Object t = item.getTag();
+                if (t != null && t instanceof String) {
+                    return tag.equals((String) t);
+                } else {
+                    return false;
+                }
+            }
+        };
+
+
     }
 
 }

@@ -3,4 +3,6 @@
     <string name="type_a_message">Type a message</string>
     <string name="title_activity_firebase_sign_up">FirebaseSignUpActivity</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_image_picker">ImagePickerActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
