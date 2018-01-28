@@ -32,6 +32,7 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intending;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasAction;
+import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static com.myhexaville.androidtests.common.Constants.IMAGE_URL;
 import static com.myhexaville.androidtests.util.Matchers.hasDrawable;
@@ -41,7 +42,7 @@ import static com.theartofdev.edmodo.cropper.CropImage.CROP_IMAGE_EXTRA_SOURCE;
 import static junit.framework.Assert.assertTrue;
 import static org.hamcrest.Matchers.not;
 
-public class ImagePIckerActivityTest {
+public class ImagePickerActivityTest {
 
     @Rule
     public IntentsTestRule<ImagePickerActivity> activityRule =
@@ -71,6 +72,7 @@ public class ImagePIckerActivityTest {
     @Test
     public void correctImageShouldBeLoaded(){
         onView(withId(R.id.second_image)).check(matches(withTag(IMAGE_URL)));
+        onView(withContentDescription("Camera")).perform(click());
     }
 
     private Instrumentation.ActivityResult getCroppedImageResult() {
