@@ -72,7 +72,6 @@ public class ImagePickerActivityTest {
     @Test
     public void correctImageShouldBeLoaded(){
         onView(withId(R.id.second_image)).check(matches(withTag(IMAGE_URL)));
-        onView(withContentDescription("Camera")).perform(click());
     }
 
     private Instrumentation.ActivityResult getCroppedImageResult() {
